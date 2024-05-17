@@ -1,8 +1,9 @@
 import type { Options } from '@wdio/types';
 import { exec } from 'child_process';
 import allureReporter from '@wdio/allure-reporter';
+import { readExcel } from './helpers/excel.helper.ts';
 import logger from '@wdio/logger';
-const log = logger('wdio');
+const log: any = logger('wdio');
 
 export const config: Options.Testrunner = {
     //
@@ -219,8 +220,16 @@ export const config: Options.Testrunner = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      * @param {string} cid worker id (e.g. 0-0)
      */
-    // beforeSession: function (config, capabilities, specs, cid) {
-    // },
+    beforeSession: async function (config, capabilities, specs, cid) {
+        try {
+            const testData = await readExcel();
+            (browser as any).testData = testData;
+            log.info('Test data successfully read and stored in browser object');
+        } catch (error) {
+            log.error('Error reading test data:', error);
+            throw error;  // Re-throw the error to fail the session if reading the data fails
+        }
+    },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
      * variables like `browser`. It is the perfect place to define custom commands.
