@@ -1,15 +1,28 @@
-import { browser } from '@wdio/globals'
+import logger from '@wdio/logger';
+const log: any = logger('BasePage');
 
-/**
-* main page object containing all methods, selectors and functionality
-* that is shared across all page objects
-*/
 export default class Page {
-    /**
-    * Opens a sub page of the page
-    * @param path path of the sub page (e.g. /path/to/page.html)
-    */
-    public open (path: string) {
-        return browser.url(`https://the-internet.herokuapp.com/${path}`)
+    passed = 'PASSED';
+    failed = 'FAILED';
+
+    get signIn() { return $('Sign In'); }
+    get createAccount() { return $('Create Account'); }
+    get continueWithApple() { return $('Continue with Apple'); }
+    get continueWithGoogle() { return $('Continue with Google'); }
+
+    get username() { return $('//android.widget.LinearLayout[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'); }
+    get password() { return $('//android.widget.LinearLayout[@resource-id="com.thegymcube.gymcube.dev:id/editTextPassword"]'); }
+    get eyeIcon() { return $('//android.widget.LinearLayout[@resource-id="com.thegymcube.gymcube.dev:id/editTextPassword"]//android.widget.ImageButton'); }
+
+    async login(usernameValue: string, passwordValue: string) {
+        try {
+            await this.username.setValue(usernameValue);
+            await this.password.setValue(passwordValue);
+            await this.signIn.click();
+            // Optionally, you can add additional verification steps after clicking sign in
+        } catch (error) {
+            log.error(`Login failed: ${error}`);
+            throw new Error('Login failed');
+        }
     }
 }

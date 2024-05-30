@@ -1,6 +1,6 @@
 import { expect } from '@wdio/globals'
-import LoginPage from '../pageobjects/login.page.js'
-import SecurePage from '../pageobjects/secure.page.js'
+// import LoginPage from '../pageobjects/login.page.js'
+// import SecurePage from '../pageobjects/secure.page.js'
 import logger from '@wdio/logger'
 const log: any = logger('Authentication');
 

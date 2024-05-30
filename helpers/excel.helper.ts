@@ -1,3 +1,4 @@
+//@ts-ignore : Ignore the warning Module '".../node_modules/xlsx/types/index"' has no default export
 import reader from 'xlsx';
 import * as moment from 'moment';
 

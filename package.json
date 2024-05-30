@@ -21,6 +21,7 @@
     "clean": "rimraf -- ./logs/*"
   },
   "dependencies": {
+    "@wdio/sync": "^7.27.0",
     "chromedriver": "^113.0.0",
     "promise-mysql": "^5.2.0"
   }
