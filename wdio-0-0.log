@@ -1,0 +1,474 @@
+2024-06-07T05:50:46.951Z INFO @wdio/local-runner: Run worker command: run
+2024-06-07T05:50:48.020Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-06-07T05:50:48.020Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-06-07T05:50:48.022Z INFO webdriver: Initiate new session using the WebDriver protocol
+2024-06-07T05:50:48.023Z INFO @wdio/utils: Connecting to existing driver at http://127.0.0.1:4723/
+2024-06-07T05:50:48.203Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-06-07T05:50:48.203Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      platformName: 'Android',
+      browserName: 'Chrome',
+      'appium:deviceName': 'emulator-5554',
+      'appium:platformVersion': '14.0',
+      'appium:automationName': 'UiAutomator2',
+      'appium:chromedriverExecutableDir': '.\\node_modules\\chromedriver\\lib\\chromedriver'
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    platformName: 'Android',
+    browserName: 'Chrome',
+    'appium:deviceName': 'emulator-5554',
+    'appium:platformVersion': '14.0',
+    'appium:automationName': 'UiAutomator2',
+    'appium:chromedriverExecutableDir': '.\\node_modules\\chromedriver\\lib\\chromedriver'
+  }
+}
+2024-06-07T05:50:48.208Z INFO webdriver: [POST] http://127.0.0.1:4723/session
+2024-06-07T05:50:48.208Z INFO webdriver: DATA {
+  capabilities: {
+    alwaysMatch: {
+      'appium:platformName': 'Android',
+      'appium:deviceName': 'emulator-5554',
+      'appium:platformVersion': '14',
+      'appium:automationName': 'UiAutomator2',
+      'appium:app': 'C:\\D\\TestProject\\wdio\\Init2\\config\\app-dev-release-197.apk',
+      'appium:appPackage': 'com.thegymcube.gymcube.dev',
+      'appium:fullReset': true,
+      'appium:noReset': false,
+      'appium:appWaitActivity': '*'
+    },
+    firstMatch: [ {} ]
+  },
+  desiredCapabilities: {
+    'appium:platformName': 'Android',
+    'appium:deviceName': 'emulator-5554',
+    'appium:platformVersion': '14',
+    'appium:automationName': 'UiAutomator2',
+    'appium:app': 'C:\\D\\TestProject\\wdio\\Init2\\config\\app-dev-release-197.apk',
+    'appium:appPackage': 'com.thegymcube.gymcube.dev',
+    'appium:fullReset': true,
+    'appium:noReset': false,
+    'appium:appWaitActivity': '*'
+  }
+}
+2024-06-07T05:51:32.477Z INFO wdio: beforeTest:: My Login application Start an empty spec to support record video for all other specs
+2024-06-07T05:51:32.478Z INFO wdio: afterTest:: My Login application Start an empty spec to support record video for all other specs 1717739492475 0 true
+2024-06-07T05:51:32.478Z INFO wdio: afterTest json:: {"id":"spec0","description":"Start an empty spec to support record video for all other specs","fullName":"My Login application Start an empty spec to support record video for all other specs","parentSuiteId":"suite1","filename":"file:///C:/D/TestProject/wdio/Init2/node_modules/@wdio/utils/build/test-framework/testInterfaceWrapper.js","failedExpectations":[],"passedExpectations":[],"deprecationWarnings":[],"pendingReason":"","duration":null,"properties":null,"debugLogs":null,"start":1717739492475}
+2024-06-07T05:51:32.483Z INFO wdio: beforeTest:: My Login application Yopmail
+2024-06-07T05:51:35.492Z INFO Authentication: Installed the app successfully
+2024-06-07T05:51:35.494Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:35.494Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:35.494Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/element
+2024-06-07T05:51:35.494Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:35.496Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/element
+2024-06-07T05:51:35.496Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:35.757Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'no such element: Unable to locate element: {"method":"xpath","selector":"//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]"}\n' +
+    '  (Session info: chrome=113.0.5672.136)',
+  stacktrace: 'Backtrace:\n' +
+    '\tGetHandleVerifier [0x00778893+48451]\n' +
+    '\t(No symbol) [0x0070B8A1]\n' +
+    '\t(No symbol) [0x00615058]\n' +
+    '\t(No symbol) [0x00640467]\n' +
+    '\t(No symbol) [0x0064069B]\n' +
+    '\t(No symbol) [0x0066DD92]\n' +
+    '\t(No symbol) [0x0065A304]\n' +
+    '\t(No symbol) [0x0066C482]\n' +
+    '\t(No symbol) [0x0065A0B6]\n' +
+    '\t(No symbol) [0x00637E08]\n' +
+    '\t(No symbol) [0x00638F2D]\n' +
+    '\tGetHandleVerifier [0x009D8E3A+2540266]\n' +
+    '\tGetHandleVerifier [0x00A18959+2801161]\n' +
+    '\tGetHandleVerifier [0x00A1295C+2776588]\n' +
+    '\tGetHandleVerifier [0x00802280+612144]\n' +
+    '\t(No symbol) [0x00714F6C]\n' +
+    '\t(No symbol) [0x007111D8]\n' +
+    '\t(No symbol) [0x007112BB]\n' +
+    '\t(No symbol) [0x00704857]\n' +
+    '\tBaseThreadInitThunk [0x7610FCC9+25]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x77D07CBE+286]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x77D07C8E+238]\n'
+}
+2024-06-07T05:51:37.180Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0053-ffff-ffff00000038',
+  ELEMENT: '00000000-0000-0053-ffff-ffff00000038'
+}
+2024-06-07T05:51:37.188Z INFO webdriver: COMMAND elementClick("00000000-0000-0053-ffff-ffff00000038")
+2024-06-07T05:51:37.189Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:37.189Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:37.190Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:37.190Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/element/00000000-0000-0053-ffff-ffff00000038/click
+2024-06-07T05:51:37.191Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/element
+2024-06-07T05:51:37.191Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:37.191Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/element
+2024-06-07T05:51:37.191Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:37.192Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:37.192Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:37.380Z INFO webdriver: RESULT null
+2024-06-07T05:51:38.049Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'no such element: Unable to locate element: {"method":"xpath","selector":"//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]"}\n' +
+    '  (Session info: chrome=113.0.5672.136)',
+  stacktrace: 'Backtrace:\n' +
+    '\tGetHandleVerifier [0x00778893+48451]\n' +
+    '\t(No symbol) [0x0070B8A1]\n' +
+    '\t(No symbol) [0x00615058]\n' +
+    '\t(No symbol) [0x00640467]\n' +
+    '\t(No symbol) [0x0064069B]\n' +
+    '\t(No symbol) [0x0066DD92]\n' +
+    '\t(No symbol) [0x0065A304]\n' +
+    '\t(No symbol) [0x0066C482]\n' +
+    '\t(No symbol) [0x0065A0B6]\n' +
+    '\t(No symbol) [0x00637E08]\n' +
+    '\t(No symbol) [0x00638F2D]\n' +
+    '\tGetHandleVerifier [0x009D8E3A+2540266]\n' +
+    '\tGetHandleVerifier [0x00A18959+2801161]\n' +
+    '\tGetHandleVerifier [0x00A1295C+2776588]\n' +
+    '\tGetHandleVerifier [0x00802280+612144]\n' +
+    '\t(No symbol) [0x00714F6C]\n' +
+    '\t(No symbol) [0x007111D8]\n' +
+    '\t(No symbol) [0x007112BB]\n' +
+    '\t(No symbol) [0x00704857]\n' +
+    '\tBaseThreadInitThunk [0x7610FCC9+25]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x77D07CBE+286]\n' +
+    '\tRtlGetAppContainerNamedObjectPath [0x77D07C8E+238]\n'
+}
+2024-06-07T05:51:38.399Z INFO webdriver: RESULT {
+  error: 'no such element',
+  message: 'An element could not be located on the page using the given search parameters.',
+  stacktrace: 'NoSuchElementError: An element could not be located on the page using the given search parameters.\n' +
+    '    at AndroidUiautomator2Driver.findElOrEls (C:\\Users\\hoang\\.appium\\node_modules\\appium-uiautomator2-driver\\node_modules\\appium-android-driver\\lib\\commands\\find.ts:86:11)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async AndroidUiautomator2Driver.findElOrElsWithProcessing (C:\\Users\\hoang\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:60:12)\n' +
+    '    at async AndroidUiautomator2Driver.findElement (C:\\Users\\hoang\\AppData\\Roaming\\npm\\node_modules\\appium\\node_modules\\@appium\\base-driver\\lib\\basedriver\\commands\\find.ts:75:12)'
+}
+2024-06-07T05:51:38.405Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:38.405Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:38.405Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:38.405Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:38.406Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/elements
+2024-06-07T05:51:38.406Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:38.498Z INFO webdriver: RESULT []
+2024-06-07T05:51:38.515Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:38.516Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:38.516Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:38.761Z INFO webdriver: RESULT []
+2024-06-07T05:51:38.910Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:38.911Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:38.911Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:39.349Z INFO webdriver: RESULT []
+2024-06-07T05:51:39.355Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:39.356Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:39.356Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:39.383Z INFO webdriver: RESULT [
+  {
+    'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0053-ffff-ffff0000004a',
+    ELEMENT: '00000000-0000-0053-ffff-ffff0000004a'
+  }
+]
+2024-06-07T05:51:39.386Z INFO webdriver: COMMAND findElement("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:39.387Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/element
+2024-06-07T05:51:39.387Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:39.425Z INFO webdriver: RESULT []
+2024-06-07T05:51:39.435Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:39.435Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:39.436Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:39.591Z INFO webdriver: RESULT []
+2024-06-07T05:51:39.595Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:39.595Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:39.595Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:39.737Z INFO webdriver: RESULT []
+2024-06-07T05:51:39.907Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:39.908Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:39.908Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:39.950Z INFO webdriver: RESULT []
+2024-06-07T05:51:39.955Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:39.955Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:39.955Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:40.059Z INFO webdriver: RESULT {
+  'element-6066-11e4-a52e-4f735466cecf': '00000000-0000-0053-ffff-ffff0000004a',
+  ELEMENT: '00000000-0000-0053-ffff-ffff0000004a'
+}
+2024-06-07T05:51:40.062Z INFO webdriver: COMMAND elementClear("00000000-0000-0053-ffff-ffff0000004a")
+2024-06-07T05:51:40.062Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/element/00000000-0000-0053-ffff-ffff0000004a/clear
+2024-06-07T05:51:40.089Z INFO webdriver: RESULT []
+2024-06-07T05:51:40.126Z INFO webdriver: RESULT null
+2024-06-07T05:51:40.127Z INFO webdriver: COMMAND elementSendKeys("00000000-0000-0053-ffff-ffff0000004a", "anh.hoang+01@innomizetech.com")
+2024-06-07T05:51:40.127Z INFO webdriver: [POST] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b/element/00000000-0000-0053-ffff-ffff0000004a/value
+2024-06-07T05:51:40.127Z INFO webdriver: DATA { text: 'anh.hoang+01@innomizetech.com' }
+2024-06-07T05:51:40.250Z INFO webdriver: RESULT []
+2024-06-07T05:51:40.255Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:40.255Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:40.255Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:40.418Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:40.419Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:40.419Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:40.677Z INFO webdriver: RESULT null
+2024-06-07T05:51:40.896Z INFO webdriver: RESULT []
+2024-06-07T05:51:40.903Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:40.904Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:40.904Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:41.126Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.138Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:41.139Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:41.139Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:41.181Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.186Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:41.186Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:41.186Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:41.347Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.407Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:41.408Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:41.408Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:41.505Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.509Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:41.510Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:41.510Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:41.655Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.713Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.723Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:41.723Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:41.723Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:41.801Z INFO webdriver: RESULT []
+2024-06-07T05:51:41.913Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:41.914Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:41.914Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:41.989Z INFO webdriver: RESULT []
+2024-06-07T05:51:42.195Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:42.195Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:42.195Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:42.264Z INFO webdriver: RESULT []
+2024-06-07T05:51:42.417Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:42.417Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:42.417Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:42.476Z INFO webdriver: RESULT []
+2024-06-07T05:51:42.699Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:42.699Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:42.699Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:42.747Z INFO webdriver: RESULT []
+2024-06-07T05:51:42.920Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:42.920Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:42.920Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:42.972Z INFO webdriver: RESULT []
+2024-06-07T05:51:43.189Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:43.189Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:43.189Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:43.258Z INFO webdriver: RESULT []
+2024-06-07T05:51:43.411Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:43.411Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:43.411Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:43.459Z INFO webdriver: RESULT []
+2024-06-07T05:51:43.693Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:43.693Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:43.694Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:43.752Z INFO webdriver: RESULT []
+2024-06-07T05:51:43.917Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:43.917Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:43.917Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:43.970Z INFO webdriver: RESULT []
+2024-06-07T05:51:44.201Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:44.202Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:44.202Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:44.258Z INFO webdriver: RESULT []
+2024-06-07T05:51:44.409Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:44.410Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:44.410Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:44.466Z INFO webdriver: RESULT []
+2024-06-07T05:51:44.693Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:44.694Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:44.694Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:44.740Z INFO webdriver: RESULT []
+2024-06-07T05:51:44.915Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:44.916Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:44.916Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:44.979Z INFO webdriver: RESULT []
+2024-06-07T05:51:45.198Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:45.198Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:45.198Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:45.254Z INFO webdriver: RESULT []
+2024-06-07T05:51:45.418Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:45.418Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:45.418Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:45.467Z INFO webdriver: RESULT []
+2024-06-07T05:51:45.703Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:45.704Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:45.704Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:45.754Z INFO webdriver: RESULT []
+2024-06-07T05:51:45.910Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:45.911Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:45.911Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:45.963Z INFO webdriver: RESULT []
+2024-06-07T05:51:46.195Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:46.196Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:46.196Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:46.245Z INFO webdriver: RESULT []
+2024-06-07T05:51:46.415Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:46.416Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:46.416Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:46.471Z INFO webdriver: RESULT []
+2024-06-07T05:51:46.700Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]")
+2024-06-07T05:51:46.700Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:46.700Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.Button[@resource-id="com.thegymcube.gymcube.dev:id/btnLogin"]'
+}
+2024-06-07T05:51:46.757Z INFO webdriver: RESULT []
+2024-06-07T05:51:46.919Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:46.919Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:46.919Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:46.972Z INFO webdriver: RESULT []
+2024-06-07T05:51:47.411Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:47.412Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:47.412Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:47.467Z INFO webdriver: RESULT []
+2024-06-07T05:51:47.919Z INFO webdriver: COMMAND findElements("xpath", "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]")
+2024-06-07T05:51:47.919Z INFO webdriver: [POST] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741/elements
+2024-06-07T05:51:47.919Z INFO webdriver: DATA {
+  using: 'xpath',
+  value: '//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]'
+}
+2024-06-07T05:51:47.970Z INFO webdriver: RESULT []
+2024-06-07T05:51:48.420Z ERROR LoginPage: Login failed: Error: Can't call setValue on element with selector "//android.widget.EditText[@resource-id="com.thegymcube.gymcube.dev:id/editTextEmail"]" because element wasn't found
+2024-06-07T05:51:48.422Z INFO wdio: afterTest:: My Login application Yopmail 1717739492481 15939 false
+2024-06-07T05:51:48.422Z INFO wdio: afterTest json:: {"id":"spec1","description":"Yopmail","fullName":"My Login application Yopmail","parentSuiteId":"suite1","filename":"file:///C:/D/TestProject/wdio/Init2/node_modules/@wdio/utils/build/test-framework/testInterfaceWrapper.js","failedExpectations":[{"matcherName":"","message":"Unhandled promise rejection: Error: Can't call click on element with selector \"//android.widget.Button[@resource-id=\"com.thegymcube.gymcube.dev:id/btnLogin\"]\" because element wasn't found","stack":"    at implicitWait (file:///C:/D/TestProject/wdio/Init2/node_modules/webdriverio/build/utils/implicitWait.js:29:19)\n    at async Element.elementErrorHandlerCallbackFn (file:///C:/D/TestProject/wdio/Init2/node_modules/webdriverio/build/middlewares.js:15:29)\n    at async Element.wrapCommandFn (file:///C:/D/TestProject/wdio/Init2/node_modules/@wdio/utils/build/shim.js:90:29)\n    at async Promise.all (index 0)\n    at async Element.<anonymous> (file:///C:/D/TestProject/wdio/Init2/node_modules/webdriverio/build/multiremote.js:106:28)\n    at async Element.wrapCommandFn (file:///C:/D/TestProject/wdio/Init2/node_modules/@wdio/utils/build/shim.js:90:29)","passed":false,"expected":"","actual":""}],"passedExpectations":[],"deprecationWarnings":[],"pendingReason":"","duration":null,"properties":null,"debugLogs":null,"start":1717739492481}
+2024-06-07T05:51:48.429Z INFO webdriver: COMMAND deleteSession()
+2024-06-07T05:51:48.429Z INFO webdriver: COMMAND deleteSession()
+2024-06-07T05:51:48.429Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/81696f75-2a06-4716-a569-996e857b423b
+2024-06-07T05:51:48.430Z INFO webdriver: [DELETE] http://127.0.0.1:4723/session/8a2e05cb-cf73-45d3-a0fb-dde007760741
+2024-06-07T05:51:49.124Z INFO webdriver: RESULT null
+2024-06-07T05:51:50.740Z INFO webdriver: RESULT null

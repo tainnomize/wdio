@@ -1,6 +1,7 @@
 //@ts-ignore : Ignore the warning Module '".../node_modules/xlsx/types/index"' has no default export
 import reader from 'xlsx';
-import * as moment from 'moment';
+//@ts-ignore
+import moment from 'moment';
 
 const dateFormatType = 'YYYY-MM-DD HH:mm:ss';
 const TestData = './config/TestData.xlsx';
@@ -97,7 +98,7 @@ export async function writeExcelResult(
     message: string = ''
 ) {
     // Format the start time and duration
-    const formattedStartTime = moment(start).format(dateFormatType);
+    const formattedStartTime = await moment(start).format(dateFormatType);
     const formattedDuration = new Date(duration).toISOString().slice(11, 19);
     const status = passed ? 'PASSED' : 'FAILED';
 

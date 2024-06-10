@@ -4,14 +4,16 @@
   "devDependencies": {
     "@types/jasmine": "^5.1.4",
     "@wdio/allure-reporter": "^8.36.1",
-    "@wdio/appium-service": "^8.36.1",
+    "@wdio/appium-service": "^8.38.2",
     "@wdio/cli": "^8.36.1",
     "@wdio/jasmine-framework": "^8.36.1",
     "@wdio/local-runner": "^8.36.1",
     "@wdio/spec-reporter": "^8.36.1",
     "appium-uiautomator2-driver": "^3.5.1",
+    "chromedriver": "^113.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
+    "wdio-chromedriver-service": "^8.1.1",
     "wdio-wait-for": "^3.0.11",
     "xlsx": "^0.18.5"
   },
@@ -22,7 +24,6 @@
   },
   "dependencies": {
     "@wdio/sync": "^7.27.0",
-    "chromedriver": "^113.0.0",
     "promise-mysql": "^5.2.0"
   }
 }

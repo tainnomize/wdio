@@ -1,7 +1,9 @@
 import type { Options } from '@wdio/types';
 import { exec } from 'child_process';
 import allureReporter from '@wdio/allure-reporter';
-import { readExcel } from './helpers/excel.helper.ts';
+import { readExcel, writeExcelResult } from './helpers/excel.helper.ts';
+// import { resolve } from 'path';
+import { AndroidInfo } from './config/android.info.ts';
 import logger from '@wdio/logger';
 const log: any = logger('wdio');
 
@@ -60,20 +62,87 @@ export const config: Options.Testrunner = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: 2,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
+    // capabilities: [{
+    //     // capabilities for local Appium web tests on an Android Emulator
+    //     'appium:platformName': 'Android',
+    //     'appium:deviceName': AndroidInfo.deviceName(),
+    //     'appium:platformVersion': AndroidInfo.platFormVersion(),
+    //     'appium:automationName': 'UiAutomator2',
+    //     'appium:app': AndroidInfo.appPath(),
+    //     'appium:appPackage': AndroidInfo.appPackage(),
+    //     'appium:fullReset': true,
+    //     'appium:noReset': false,
+    //     "appium:appWaitActivity": "*",
+    //     excludeDriverLogs: ['bugreport']
+    // },
+    // {
+    //     platformName: 'Android',
+    //     browserName: 'Chrome',
+    //     'appium:deviceName': 'emulator-5554',
+    //     'appium:platformVersion': '14.0',
+    //     'appium:automationName': 'UiAutomator2',
+    //     'appium:chromedriverExecutableDir': '.\\node_modules\\chromedriver\\lib\\chromedriver',
+    // }],
+    // capabilities:
+    // {
+    //     web: {
+    //         "hostname": "localhost",
+    //         "port": 7676,
+    //         "path": "/",
+    //         capabilities: {
+    //             platformName: 'Android',
+    //             browserName: 'Chrome',
+    //             'appium:deviceName': 'emulator-5554',
+    //             'appium:platformVersion': '14.0',
+    //             'appium:automationName': 'UiAutomator2',
+    //             'appium:chromedriverExecutableDir': '.\\node_modules\\chromedriver\\lib\\chromedriver',
+    //         }
+    //     },
+    //     mobile: {
+    //         "hostname": "localhost",
+    //         "port": 4723,
+    //         "path": "/wd/hub",
+    //         capabilities: {
+    //             // capabilities for local Appium web tests on an Android Emulator
+    //             'appium:platformName': 'Android',
+    //             'appium:deviceName': AndroidInfo.deviceName(),
+    //             'appium:platformVersion': AndroidInfo.platFormVersion(),
+    //             'appium:automationName': 'UiAutomator2',
+    //             'appium:app': AndroidInfo.appPath(),
+    //             'appium:appPackage': AndroidInfo.appPackage(),
+    //             'appium:fullReset': true,
+    //             'appium:noReset': false,
+    //             "appium:appWaitActivity": "*",
+    //             // excludeDriverLogs: ['bugreport']
+    //         }
+    //     }
+    // },
+    // capabilities: [{
+    //     // capabilities for local Appium web tests on an Android Emulator
+    //     platformName: 'Android',
+    //     browserName: 'Chrome',
+    //     'appium:deviceName': 'emulator-5554',
+    //     'appium:platformVersion': '14.0',
+    //     'appium:automationName': 'UiAutomator2',
+    //     'appium:chromedriverExecutableDir': '.\\node_modules\\chromedriver\\lib\\chromedriver',
+    // }],
     capabilities: [{
-        // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'emulator-5554',
-        'appium:platformVersion': '14.0',
+        'appium:platformName': 'Android',
+        'appium:deviceName': AndroidInfo.deviceName(),
+        'appium:platformVersion': AndroidInfo.platFormVersion(),
         'appium:automationName': 'UiAutomator2',
-        'appium:chromedriverExecutableDir': '.\\node_modules\\chromedriver\\lib\\chromedriver',
+        'appium:app': AndroidInfo.appPath(),
+        'appium:appPackage': AndroidInfo.appPackage(),
+        'appium:fullReset': true,
+        'appium:noReset': false,
+        "appium:appWaitActivity": "*",
+        excludeDriverLogs: ['bugreport']
     }],
 
     //
@@ -117,7 +186,7 @@ export const config: Options.Testrunner = {
     connectionRetryTimeout: 120000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount: 1,
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
@@ -221,14 +290,18 @@ export const config: Options.Testrunner = {
      * @param {string} cid worker id (e.g. 0-0)
      */
     beforeSession: async function (config, capabilities, specs, cid) {
-        try {
-            const testData = await readExcel();
-            (browser as any).testData = testData;
-            log.info('Test data successfully read and stored in browser object');
-        } catch (error) {
-            log.error('Error reading test data:', error);
-            throw error;  // Re-throw the error to fail the session if reading the data fails
-        }
+        // try {
+        //     const testData = await readExcel();
+        //     (global as any).testData = testData;
+        //     log.info('Test data successfully read and stored in browser object');
+        //     await browser.removeApp(AndroidInfo.appPackage());
+        //     await browser.installApp(AndroidInfo.appPath());
+        //     await browser.activateApp(AndroidInfo.appPackage());
+        //     log.info('Reinstall the application');
+        // } catch (error) {
+        //     log.error('Error reading test data:', error);
+        //     throw error;  // Re-throw the error to fail the session if reading the data fails
+        // }
     },
     /**
      * Gets executed before test execution begins. At this point you can access to all global
@@ -256,8 +329,9 @@ export const config: Options.Testrunner = {
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
     beforeTest: async function (test, context) {
+        await log.info(`beforeTest:: ${test.fullName}`);
         await allureReporter.addFeature(test.fullName);
-        await browser.startRecordingScreen();
+        // await browser.startRecordingScreen();
     },
     /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
@@ -281,11 +355,20 @@ export const config: Options.Testrunner = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    afterTest: async function (test, context, { error, result, duration, passed, retries }) {
-        await browser.takeScreenshot();
-        await browser.saveRecordingScreen(`./logs/${test.fullName}.mp4`);
-
-        log.info(`afterTest:: ${test.fullName} ${duration} ${passed}`);
+    afterTest: async function (test: any, context, { error, result, duration, passed, retries }) {
+        log.info(`afterTest:: ${test.fullName} ${test['start']} ${duration} ${passed}`);
+        log.info(`afterTest json:: ${JSON.stringify(test)}`);
+        if ((global as any).testCase && (global as any).testCase.hasOwnProperty('TC')) {
+            await writeExcelResult(
+                passed,
+                test['start'],
+                duration,
+                (global as any).testCase.TC,
+                (global as any).testCase.sheet
+            );
+        }
+        // await browser.takeScreenshot();
+        // await browser.saveRecordingScreen(`./logs/${test.fullName}.mp4`);
     },
 
 
